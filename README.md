@@ -20,7 +20,7 @@ This web application is for determining your Akan Name simply by taking in your 
     OUTPUT: "Displays User's Akan Name According to Submitted Date and Gender"
 2. Displays an Error Message if Date - - - Input Left Blank
     INPUT: ""
-    OUTPUT: "Displays Error Message"
+    OUTPUT: "Displays Error Message"     
 
 ## Known Bugs
 The formula used to get your day of birth and give you your Akan Name is at odds. (bug fixing in progress)
