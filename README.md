@@ -34,7 +34,7 @@ The formula used to get your day of birth and give you your Akan Name is at odds
 ## Support and Contact details
 Your contribution to this code is highly valued. In case you have any queries, contributions, comments or correction kindly contact me at ninahb746@gmail.com
 
-Link to live site
+Link to live site https://ninahmo.github.io/Akan-names/.
 
 ### License
 MIT License
