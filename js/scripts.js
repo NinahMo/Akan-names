@@ -1,4 +1,3 @@
-  
 function allNames(){
 
     var mydate = document.getElementById("mydate");

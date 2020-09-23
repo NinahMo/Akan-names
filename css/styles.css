@@ -5,31 +5,11 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
 }
-.float {
-  text-align: left;
-  font-weight: bolder;
-}
-.container{
-  margin-top: 100px;
-  flex-direction: column;
-  margin-bottom: 45px;
-  float: right;
-  width: 80%;
-  margin: auto;
-}
-.author{
-  color: orange;
-}
-.main-left{
-  color: black;
-  text-align: center;
-  background-size: cover;
-}
 
 h3{
   color: lightseagreen;
   text-decoration: underline;
-  font-family: 'Tangerine', serif;
+  font-family: 'Marck Script', cursive;
   font-size: 60px; 
 }
 p{
