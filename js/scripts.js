@@ -1,39 +1,57 @@
+  
+function allNames(){
 
-var daysOfTheWeek= ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-var maleNames= ["Kwasi", "Kwadwo", "Kwabena", "Kwaku", "Yaw", "Kofi", "Kwame"];
-var femaleNames = ["Akosua", "Adwoa", "Abenaa", "Akua", "Yaa", "Afua", "Ama"];
-function findAkanNames(){
-    var day = parseInt(document.getElementById("day").value);
-    var month = parseInt(document.getElementById("month").value);
-    var year = document.getElementById("year").value;
-    var gender = document.getElementById("gender").value;
-   if (day <= 0 || day > 31 ){
-        alert("Invalid day!");
+    var mydate = document.getElementById("mydate");
+    
+    var gender = document.akanform.gender;
+
+    var bday = mydate.value;
+    var date = new Date(document.getElementById("mydate").value);
+    var dateday = date.getDay();
+    var weekdays = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+    var day = weekdays[dateday];
+    var mName =["Kwasi","Kwadwo","Kwabena","Kwaku","Yaw","Kofi","Kwame"];
+    var fName = ["Akosua","Adwoa","Abenaa","Akua","Yaa","Afua","Ama"];
+    var valid = false; 
+
+    
+    var display = document.getElementById('display');
+    if(mydate.value == ""){
+        mydateerror.innerHTML = "Please enter a valid date ";
+        mydate.focus();
+        return false;
+    }else{
+    
+        for(var i = 0;i<gender.length;i++){
+            if(gender[i].checked){
+                valid = true;
+                break;
+            }
+        }
+        if(valid){
+            if(gender[i].value == "male"){
+                display.innerHTML = "You were born on a "+day+".<br>"+"Your Akan Name is " + mName[dateday]; 
+            }else{
+            if(gender[i].value == "female"){
+                display.innerHTML = "You were born on a "+day+".<br>"+"Your Akan Name is " + fName[dateday]; 
+            }
+            }
+        }else{
+            gendererror.innerHTML = "Please select gender";
+            return false;
+        }    
     }
-     else if (month <= 0 ||  month > 12  || (month == 2 && day >29)){
-        alert("Invalid month!")
-    }
-    var centuryYear;
-    var yearDigits;
-    var weekDay;
-    var name;
-    var dOfWeek;
-    var weekDayTrunc;
-    centuryYear = parseInt(year.slice(0, 2));
-    yearDigits = parseInt(year.slice(2, 4));
-    weekDay = ( ( (centuryYear/4) -2*centuryYear-1) + ((5*yearDigits/4) ) + ((26*(month+1)/10)) + day ) % 7;
-    document.getElementById('output').innerHTML = weekDay;
-    weekDayTrunc = Math.trunc(weekDay);
-    if (gender === "Male"){
-       name = maleNames[weekDayTrunc];
-       dOfWeek = daysOfTheWeek[weekDayTrunc];
-    }
-    else if (gender === "Female"){
-      name = femaleNames[weekDayTrunc];
-      dOfWeek = daysOfTheWeek[weekDayTrunc];
-    }
-     else {
-        alert("Select gender")
-    }
-    document.getElementById('output').innerHTML = "Your Akan name " + name + " meaning you were born on " + dOfWeek;
+}
+function refresh(){
+    document.getElementById('mydateerror').innerHTML = "";
+    document.getElementById('gendererror').innerHTML = "";
+    document.getElementById('display').innerHTML = "";
+    mydate.value = "";
+    mydate.style.backgroundColor = "white";
+    mydate.style.border = "none";
+    mydate.style.borderBottom = "2px solid #ff5722";
+    var ele = document.getElementsByName("gender");
+
+    for(var j=0;j<gender.length;j++)
+       gender[j].checked = false;
 }

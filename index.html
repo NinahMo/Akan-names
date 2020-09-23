@@ -1,4 +1,78 @@
 <!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"> 
+    <link href="https://fonts.googleapis.com/css?family=Tangerine" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+
+</head>
+<body>
+     <!--Akan name description-->
+     <br><br><br>
+     <div class="container">
+        <div class="row">
+            <div class="col-md-10 offset-md-1">
+                <div class="row">
+                    <div class="col-md-5 main-left">
+                        <h3>Akan Names</h3>
+                        <p>This web application is for determining your Akan Name simply by taking in your birthday credentials and your gender then it calculates the week you were born and the exact day . Afterwhich it generates your Akan Name which you will see after submitting your credentials. Akan Names are from the Ghanian culture in which children are given first name as a 'day name' which corresponds to the day in the week they were born.</p>
+                     </div>
+                      <!--Akan DOB-->
+                      <div class="col-md-6 main-right">
+                        <div class="form">
+                            <form name="akanform" onsubmit="return false" >
+                                <div class="dates">
+                                    <ul>
+                                        <li>
+                                            <label for="">Date of Birth</label>
+                                        </li>
+                                        <li>
+                                            <input type="date" class="dob" name="mydate" id="mydate" >
+                                        </li>
+                                        <li><div class = "errormessage" id = "mydateerror"></div></li>
+                                    </ul>
+                                </div>
+                                <!--Akan generator-->
+                                <div class="gender">
+                                    <ul>
+                                        <li>
+                                            <label for="">Gender</label>
+                                        </li>
+                                        <li>
+                                            <input type="radio" name="gender" value="male" class="test" id="male">Male
+                                            <input type="radio" name="gender" value="female" class="test"  id="female" style="margin-left: 40px;">Female
+                                        </li>
+                                        <li><div class = "errormessage" id = "gendererror"></div></li>
+                                    </ul>
+                                    
+                                </div>  
+                                <input type="submit" name="submit" class="button color bg-primary" value="Generate" onclick="allNames()" style="margin-left: 40px;">
+                                <input type="reset" onclick="refresh(); return false;" class="button color bg-primary" value="Clear">	
+                            </form>
+                            <hr>
+                            <div class="diplay" id="display"></div>
+                        </div>
+                    </div>
+                </div>
+                 
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+</body>
+<script src="js/scripts.js"></script>
+</html>
+
+
+
+
+<!-- <!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8">
@@ -64,4 +138,4 @@
    </div>
   <script src="js/scripts.js"></script>
   </body>
-</html>
+</html> -->
