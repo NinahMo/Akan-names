@@ -1,0 +1,29 @@
+h1 {
+  color: brown;
+  font-style: italic;
+}
+
+h2, h3 {
+  color: green;
+}
+
+body {
+  background-color: orange;
+  color: black;
+  background-image: url("images/Akan.png");
+}
+.float {
+  text-align: left;
+  font-weight: bolder;
+}
+.container{
+  margin-top: 100px;
+  flex-direction: column;
+  margin-bottom: 45px;
+  float: right;
+  width: 80%;
+  margin: auto;
+}
+.author{
+  color: orange;
+}
